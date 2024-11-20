@@ -25,19 +25,19 @@ class SettingsPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 22),
-                InkWell(
+                GestureDetector(
                     onTap: () {
                       launchUrl(Uri.parse(
                           'https://docs.google.com/document/d/1CsR9z3jJLvXVHu25hOHsd4Q8IZCZuEjnoZfio-wgL0Q/edit?usp=sharing'));
                     },
                     child: _Button(id: 2, title: 'Privacy Policy')),
-                InkWell(
+                GestureDetector(
                     onTap: () {
                       launchUrl(Uri.parse(
                           'https://docs.google.com/document/d/1gY7rCtYMIXmz4VV8SRtk2RJ2_G8o-wmw7SyZFSB-Jus/edit?usp=sharing'));
                     },
                     child: _Button(id: 3, title: 'Terms of use')),
-                InkWell(
+                GestureDetector(
                     onTap: () {
                       launchUrl(
                           Uri.parse('https://forms.gle/P4HPVsuJwE7mUdxy6'));
@@ -66,7 +66,6 @@ class _Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyButton(
-      onPressed: () {},
       child: SizedBox(
         height: 56,
         child: Row(
